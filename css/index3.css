@@ -127,6 +127,10 @@ img {
     display: block;
 }
 
+.gallery {
+    background: #1D1D1D;
+}
+
 
 /* MEDIA QUERIES */
 
