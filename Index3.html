@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/index3.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <title>Document</title>
@@ -149,13 +149,14 @@
                 <div class="mb-3">
                     <h5 class="font-weight-bold">Services</h5>
                 </div>
-
-                <ul class="p-3">
-                    <li>Lorem ipsum dolor sit amet,</li>
-                    <li>Lorem ipsum dolor sit amet,</li>
-                    <li>Lorem ipsum dolor sit amet,</li>
-                    <li>Lorem ipsum dolor sit amet,</li>
-                </ul>
+                <div class="lorem">
+                    <ul class="p-3 ">
+                        <li>Lorem ipsum dolor sit amet,</li>
+                        <li>Lorem ipsum dolor sit amet,</li>
+                        <li>Lorem ipsum dolor sit amet,</li>
+                        <li>Lorem ipsum dolor sit amet,</li>
+                    </ul>
+                </div>
 
                 <button type="button" class="btn btn-outline-secondary btn-lg px-5 mb-5">See More</button>
             </div>
@@ -195,11 +196,8 @@
     <!-- GAllery Beins here -->
     <section class="mt-5 pt-5">
         <div class="gallery-head">
-
-
             <div class="container">
                 <div class="row pt-4 pb-4">
-
 
                     <img src="./index3-img/i1.png" class="img-fluid" alt="">
                     <img src="./index3-img/i2.png" class="img-fluid" alt="">
@@ -267,7 +265,118 @@
     </section>
 
     <!-- Contact Us -->
-    <section class="container mt-5">
+    <section class="container mt-5 pt-5">
+        <h5 class="font-weight-bold mb-3">Contact Us </h5>
+        <div class="row mt-5">
+
+            <div class="col-md-4">
+                <div class="">
+                    <img class="icon img-fluid" src="./index3-img/map-pin.png" alt="">
+                </div>
+                <div class=" mt-3">
+                    <p>4107th Avenue, Grassland, Alberta, <br> Canada</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <img class="icon img-fluid" src="./index3-img/phone-outline.png" alt="">
+
+                </div>
+                <div class="mt-3">
+                    <p>+4417653907 </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <img class="icon img-fluid" src="./index3-img/email-outline.png" alt="">
+                </div>
+                <div class="mt-3">
+
+                    <a style="color:#1D1D1D" href="mailto:Fotografas@hey.com">Fotografas@hey.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <h5 class="font-weight-bold mb-3">Or Message Us </h5>
+        </div>
+
+        <div class="row ">
+            <div class="col-lg-4 col-md-4">
+                <div class="form-group">
+                    <label for="name" class="savings-label mt-1"> Name </label>
+                    <input id="name" type="text" class="form-control form-control-lg" required="">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <div class="form-group">
+                    <label for="email" class="savings-label mt-1">  Email</label>
+                    <input id="email" type="email" class="form-control form-control-lg" required="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-lg-8">
+                <div class="form-group">
+                    <label for="email" class="savings-label mt-1">  Message</label>
+                    <!-- <label for="validationTextarea">Textarea</label> -->
+                    <textarea class="form-control " rows="8" cols="50" required></textarea>
+                </div>
+            </div>
+
+        </div>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-5 mb-5">Submit</button>
+    </section>
+
+    <section class="mt-5 pt-5">
+        <div class="foot">
+            <footer>
+                <div class="container ">
+                    <div class="row foot-head">
+                        <div class="col-md-3 mx-3 col-6">
+                            <div class="head-caption">
+                                Fotografas
+                            </div>
+                            <p>4107th Avenue, Grassland, Alberta, Canada</p>
+                            <div class="social-icon">
+                                <img class="mx-1" src="./Images/facebook.png" alt="">
+                                <img class="mx-1" src="./Images/twitter.png" alt="">
+                                <img class="mx-1" src="./Images/instagram.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mx-3 col-6">
+                            <div class="head-caption">
+                                About Us
+                            </div>
+
+                            <ul class="m-0 p-0">
+                                <li> Our Mission</li>
+                                <li>The Team </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 mx-3 col-6">
+                            <div class="head-caption">
+                                Get Support
+                            </div>
+                            <ul class="m-0 p-0">
+                                <li>FAQ </li>
+                                <li>Customer Service </li>
+                                <li>Ask a Question </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            gg
+        </div>
 
     </section>
 </body>
