@@ -1,0 +1,169 @@
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+
+$orange: #FE5D26
+$dark: #1D1D1D
+
+html
+    overflow-x: hidden
+
+body 
+    // width: 100%
+    // overflow-x: hidden
+
+.pad 
+    padding: 0 1.5rem
+
+nav 
+    width: 100%
+    display: flex
+    height: 80px
+    
+    justify-content: space-between
+    align-items: center
+    padding: 0 25px
+    .navbar 
+           ul 
+               display: flex
+               li 
+                   list-style-type: none
+                   a 
+                       padding: 15px
+                       text-decoration: none
+                       font-size: 1.2rem
+                       color: #333
+                       &:hover, &:active
+                           color: #fdfd2e
+
+// remove inline styling 
+
+header 
+    height: 35rem   
+    backgrond: $dark
+    display: flex
+    .image
+        display: inherit
+        justify-content: flex-end
+        flex-direction: column
+        align-items: center
+        flex: 2
+        img
+            height: auto
+            width: 25rem
+    .text 
+        display: inherit
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        // padding: 0 10px
+        text-align: left
+        height: 100%
+        .box
+            width: 60%
+            height: 100%
+            // background-color: #444
+            flex-direction: column
+            display: flex
+            justify-content: center
+            a 
+                margin: 25px 0
+            
+
+.row 
+    display: flex
+    margin: 1.5rem 0 
+
+.flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+a 
+    text-decoration: none
+
+.button 
+    padding: 20px
+    background-color: #fff
+    width: 10rem
+    color: $dark
+    &:hover
+        background: $dark
+        color: #fff
+
+
+.text-section
+    display: flex 
+    padding: 0 2.5rem
+    flex-direction: column
+    flex: 2
+    // background-color: #333
+    .upper-text
+        height: 15%
+        // height: 100%
+        padding-left: 2.5rem
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        // background-color: #ee0
+        hr 
+            // color: #00e
+            border: 0
+            background-color: $orange
+            width: 30%
+            height: .25rem
+            
+    .main-text 
+        height: 95%
+        // background-color: #419789
+        display: flex
+        .side-text 
+            color: $dark
+            // background-color: #419789
+            height: 100%
+            width: 10%
+            display: flex
+            justify-content: center
+            align-items: center
+            .rotate 
+                transform: rotate(90deg)
+                background-color: $orange
+                display: flex
+                // width: 100%
+                // height: 15%
+                padding: 1.0rem 2rem
+
+
+                &.second
+                    transform: rotate(270deg)
+                    
+        .text 
+            // display
+            padding: 0 1.5rem
+
+            span
+                
+                margin: 0 10px
+
+.reverse 
+    flex-direction: row-reverse
+
+.text-image
+    display: inherit
+    height: 100%
+    flex-direction: column
+    img 
+        height: auto
+        width: 100% 
+    .image-info 
+        margin: 
+        display: flex
+        width: 100%
+        justify-content: space-between
+        border-top: 3px solid #e91
+        margin: 2.5rem 0
+        p 
+            padding: .2rem 0
