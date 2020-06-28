@@ -16,7 +16,7 @@ header {
 }
 
 .hero {
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(rgba(29, 29, 29, 0.5), rgba(29, 29, 29, 0.5)), url("../index3-img/Hero-Image.png");
     background-size: cover;
     background-position: center;
@@ -42,6 +42,29 @@ header {
     border: none;
 }
 
+.border-orange {
+    border: 2px solid #FE5D26;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle {
+    position: absolute;
+    top: 80px;
+    height: 32vh;
+    right: 15px;
+    width: 3vw;
+    background: #FE5D26;
+    transform: rotate(180deg)
+}
+
+.rectangle p {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    color: #1D1D1D;
+    text-align: center;
+    display: inline-block;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -57,6 +80,14 @@ header {
         font-size: 25px;
         padding-top: 150px;
         line-height: 35px;
+    }
+    .btn-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .latest-img {
+        display: none;
     }
 }
 
