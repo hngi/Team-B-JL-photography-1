@@ -32,6 +32,16 @@ header {
     line-height: 50px;
 }
 
+.btn {
+    background: white;
+    color: #1D1D1D;
+    font-weight: bold;
+}
+
+.btn :active {
+    border: none;
+}
+
 
 /* MEDIA QUERIES */
 
