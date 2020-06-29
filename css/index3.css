@@ -5,6 +5,10 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .nav-item {
     font-family: 'Roboto';
     color: #1D1D1D;
