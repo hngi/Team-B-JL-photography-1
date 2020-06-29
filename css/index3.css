@@ -177,6 +177,11 @@ li {
     height: 20vh;
 }
 
+.quick-links a {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 /* MEDIA QUERIES */
 
