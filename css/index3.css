@@ -168,6 +168,11 @@ li {
     padding-left: 60px
 }
 
+.img-fluids img {
+    max-width: 100%;
+    height: 20vh;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -261,6 +266,10 @@ li {
     }
     .sessions-pad {
         padding-left: 0px
+    }
+    .img-fluids img {
+        max-width: 100%;
+        height: 17vh;
     }
 }
 
