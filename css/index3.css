@@ -164,6 +164,10 @@ li {
     padding-top: 50px;
 }
 
+.sessions-pad {
+    padding-left: 60px
+}
+
 
 /* MEDIA QUERIES */
 
@@ -254,6 +258,9 @@ li {
     }
     .border-orange-services {
         display: none;
+    }
+    .sessions-pad {
+        padding-left: 0px
     }
 }
 
