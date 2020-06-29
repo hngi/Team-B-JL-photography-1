@@ -38,6 +38,10 @@ header {
     font-weight: bold;
 }
 
+.latest-works {
+    padding-top: 60px;
+}
+
 .btn :active {
     border: none;
 }
@@ -114,7 +118,7 @@ ul {
 .foot {
     background: #1D1D1D;
     color: white;
-    padding: 60px;
+    /* padding: 60px; */
 }
 
 .head-caption {
@@ -128,6 +132,27 @@ ul {
 li {
     margin: 0px;
     padding: 0px;
+}
+
+.inner {
+    background-color: white;
+    /* width: 100px; */
+    /* position: absolute; */
+    /* width: 200px; */
+}
+
+.mobile-latest {
+    display: none;
+}
+
+.ryan-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.emily-img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -153,6 +178,67 @@ li {
     }
     .latest-img {
         display: none;
+    }
+    .latest-works {
+        padding-top: 2px;
+    }
+    .container .col-reverse .row {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    }
+    .mobile-latest {
+        display: block;
+        margin-bottom: -30px;
+        text-align: left;
+        margin-left: 12px;
+    }
+    .desktop-latest {
+        display: none;
+    }
+    div .col p {
+        margin-bottom: -2rem;
+    }
+    .ryan-img {
+        max-width: 85%;
+        height: auto;
+    }
+    .rectangle {
+        position: absolute;
+        top: -185px;
+        height: 21vh;
+        right: 25px;
+        width: 8vw;
+        background: #FE5D26;
+        transform: rotate(180deg);
+    }
+    .rectangle p {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        color: #1D1D1D;
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .emily-img {
+        max-width: 85%;
+        height: auto;
+        margin-left: 40px;
+    }
+    .rectangle-2 {
+        position: absolute;
+        top: -194px;
+        height: 21vh;
+        width: 8vw;
+        background: #FE5D26;
+        transform: rotate(180deg);
+        left: 21px;
+    }
+    .rectangle-2 p {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        color: #1D1D1D;
+        font-size: 8px;
+        font-weight: 500;
     }
 }
 
