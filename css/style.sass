@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$main-font: Roboto    
+
+
 * 
     padding: 0
     margin: 0
@@ -12,10 +17,27 @@ html
 
 body 
     // width: 100%
+    font-family: $main-font
     // overflow-x: hidden
+
+// Strapping 
 
 .pad 
     padding: 0 1.5rem
+.half 
+    display: grid
+    grid-template-columns: 2fr 2fr
+.row 
+    display: flex
+    margin: 1.5rem 0 
+.flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+a 
+    text-decoration: none
+.reverse 
+    flex-direction: row-reverse
 
 nav 
     width: 100%
@@ -55,6 +77,7 @@ header
             width: 25rem
     .text 
         display: inherit
+        color: #fff
         flex-direction: column
         justify-content: center
         align-items: center
@@ -68,22 +91,12 @@ header
             flex-direction: column
             display: flex
             justify-content: center
+            h1 
+                font-size: 2.5rem 
             a 
                 margin: 25px 0
             
 
-.row 
-    display: flex
-    margin: 1.5rem 0 
-
-.flex-center
-    display: flex
-    align-items: center
-    justify-content: center
-
-
-a 
-    text-decoration: none
 
 .button 
     padding: 20px
@@ -148,8 +161,6 @@ a
                 
                 margin: 0 10px
 
-.reverse 
-    flex-direction: row-reverse
 
 .text-image
     display: inherit
@@ -167,3 +178,217 @@ a
         margin: 2.5rem 0
         p 
             padding: .2rem 0
+
+
+.button-outline
+    color: $dark
+    border: 2px solid $dark
+    // margin: .5rem 0
+    padding: .5rem 1.5rem
+    width: 8.5rem
+    &:hover 
+        background-color: $dark
+        color: #fff
+
+
+
+.services 
+    width: 100% 
+    flex-direction: row
+    section
+        flex: 1
+        display: flex
+        flex-direction: column
+        // flex: 1
+        // background-color: #a89
+        .title
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            hr 
+                border: 0
+                background-color: $orange
+                width: 25%
+                height: .25rem
+            h2 
+                padding: 1.5rem 0
+
+        .text 
+            display: flex
+            justify-content: center
+            flex-direction: column
+            // align-items: center
+            // background-color: #eeaa11
+            height: 90%
+            margin: .5rem 0
+            ul 
+                padding-left: 20px
+                margin: 1.5rem 0
+    
+    .image
+        display: flex
+        padding: 0 2.5rem
+        // check here for image resize
+        img 
+            heigth: auto
+            width: 100%
+
+
+    
+
+.sessions
+    padding: 2rem 1.5rem
+    justify-content: space-around 
+    .image 
+        img 
+            heigth: auto
+            width: 100%
+
+    .text 
+        border-top: 2px solid $orange
+        // background-color: #5ba135
+        flex-direction: column
+        align-items: flex-start
+        margin: 0 5rem
+
+
+
+.gallery 
+    height: 33rem
+    .gallery-images
+        height: 100%
+        background-color: $dark
+        // vertical-align: center
+
+.photographers 
+    text-align: center
+    margin: 3rem 0
+    .team-photos 
+        .team 
+            margin: 0 1rem
+            position: relative
+            
+            img 
+                height: auto
+                width: 550px
+                transition: 300ms 
+            p 
+                display: block 
+                background-color: $dark
+                width: 100%
+                bottom: 0
+                padding: 1rem 0
+                font-size: 1.5rem
+                position: absolute
+                color: #fff
+                transition: 200ms ease-out
+                // &:hover
+            &:hover
+                img
+                    transform: scale(1.05)
+                p
+                    background-color: transparent 
+                    bottom: -.2rem
+                    // color: $orange
+                    font-size: 2rem
+
+
+
+h2 
+    font-size: 2.5rem
+
+.contact
+    section 
+        display: flex
+        justify-content: flex-start
+        // background-color: $orange
+        height: 5rem
+        align-items: center
+        // .action:not(:first-child)
+        //     padding: 0 10rem
+        .action
+            width: 30rem
+            p 
+                font-size: 1.5rem
+            span 
+                font-size: 2rem
+
+
+    .message 
+        
+        .form 
+            form 
+
+                width: 30%
+                .input-group 
+                    display: flex 
+                    flex-direction: column
+                    label 
+                        padding: .5rem 0
+                        font-weight: 600
+                        letter-spacing: 1px
+                    input 
+                        width: 19rem
+                        // padding: 2rem 0
+                    textarea
+                        width: 40rem
+                    input, textarea 
+                        // width: 40rem
+                        padding: 1rem .5rem
+                        font-size: 1.5rem
+                    &:last-child
+                        margin-left: 2rem
+                .input-submit 
+                    button 
+                        margin: 1rem 0
+                .row 
+                    // justify-content: space-around
+
+
+footer 
+    // height: 20rem
+    padding: 10rem 0
+    background-color: $dark
+    color: #fff
+    position: relative
+    display: flex
+    align-items: center
+    h3 
+        padding: .3rem 0
+    a 
+        margin: .2rem 0
+    .about 
+        display: flex
+        flex-direction: column
+    .support 
+        display: flex
+        flex-direction: column
+
+
+    div:not(:last-child)
+        margin: 0 3rem 
+        width: 30%
+        display: flex
+        flex-direction: column
+        a 
+            color: #fff
+            &:hover, &:active
+                color: $orange
+
+    // div:nth-child(1)
+    //     // color: $orange
+    //     margin: 0 3rem 
+    //     width: 10%
+
+
+
+    .social-icons
+        background-color: #fff
+        position: absolute
+        padding: 1rem 0 
+        bottom: 0
+        width: 20rem
+        text-align: center
+        left: 0
+
+        

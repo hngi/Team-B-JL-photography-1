@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +10,49 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  font-family: Roboto;
+}
+
 .pad {
   padding: 0 1.5rem;
+}
+
+.half {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr;
+      grid-template-columns: 2fr 2fr;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 nav {
@@ -82,6 +123,7 @@ header .image img {
 
 header .text {
   display: inherit;
+  color: #fff;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -111,31 +153,12 @@ header .text .box {
           justify-content: center;
 }
 
+header .text .box h1 {
+  font-size: 2.5rem;
+}
+
 header .text .box a {
   margin: 25px 0;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1.5rem 0;
-}
-
-.flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-a {
-  text-decoration: none;
 }
 
 .button {
@@ -230,13 +253,6 @@ a {
   margin: 0 10px;
 }
 
-.reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 .text-image {
   display: inherit;
   height: 100%;
@@ -266,7 +282,307 @@ a {
 .text-image .image-info p {
   padding: .2rem 0;
 }
-/*# sourceMappingURL=style.css.map */
-=======
 
->>>>>>> 3fc9bc61194ed9a5c0f753ce0a7bbf8a942cbb35
+.button-outline {
+  color: #1D1D1D;
+  border: 2px solid #1D1D1D;
+  padding: .5rem 1.5rem;
+  width: 8.5rem;
+}
+
+.button-outline:hover {
+  background-color: #1D1D1D;
+  color: #fff;
+}
+
+.services {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services section .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services section .title hr {
+  border: 0;
+  background-color: #FE5D26;
+  width: 25%;
+  height: .25rem;
+}
+
+.services section .title h2 {
+  padding: 1.5rem 0;
+}
+
+.services section .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90%;
+  margin: .5rem 0;
+}
+
+.services section .text ul {
+  padding-left: 20px;
+  margin: 1.5rem 0;
+}
+
+.services .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2.5rem;
+}
+
+.services .image img {
+  heigth: auto;
+  width: 100%;
+}
+
+.sessions {
+  padding: 2rem 1.5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sessions .image img {
+  heigth: auto;
+  width: 100%;
+}
+
+.sessions .text {
+  border-top: 2px solid #FE5D26;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 5rem;
+}
+
+.gallery {
+  height: 33rem;
+}
+
+.gallery .gallery-images {
+  height: 100%;
+  background-color: #1D1D1D;
+}
+
+.photographers {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.photographers .team-photos .team {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.photographers .team-photos .team img {
+  height: auto;
+  width: 550px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.photographers .team-photos .team p {
+  display: block;
+  background-color: #1D1D1D;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  position: absolute;
+  color: #fff;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+
+.photographers .team-photos .team:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.photographers .team-photos .team:hover p {
+  background-color: transparent;
+  bottom: -.2rem;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.contact section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact section .action {
+  width: 30rem;
+}
+
+.contact section .action p {
+  font-size: 1.5rem;
+}
+
+.contact section .action span {
+  font-size: 2rem;
+}
+
+.contact .message .form form {
+  width: 30%;
+}
+
+.contact .message .form form .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .message .form form .input-group label {
+  padding: .5rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contact .message .form form .input-group input {
+  width: 19rem;
+}
+
+.contact .message .form form .input-group textarea {
+  width: 40rem;
+}
+
+.contact .message .form form .input-group input, .contact .message .form form .input-group textarea {
+  padding: 1rem .5rem;
+  font-size: 1.5rem;
+}
+
+.contact .message .form form .input-group:last-child {
+  margin-left: 2rem;
+}
+
+.contact .message .form form .input-submit button {
+  margin: 1rem 0;
+}
+
+footer {
+  padding: 10rem 0;
+  background-color: #1D1D1D;
+  color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer h3 {
+  padding: .3rem 0;
+}
+
+footer a {
+  margin: .2rem 0;
+}
+
+footer .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer div:not(:last-child) {
+  margin: 0 3rem;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer div:not(:last-child) a {
+  color: #fff;
+}
+
+footer div:not(:last-child) a:hover, footer div:not(:last-child) a:active {
+  color: #FE5D26;
+}
+
+footer .social-icons {
+  background-color: #fff;
+  position: absolute;
+  padding: 1rem 0;
+  bottom: 0;
+  width: 20rem;
+  text-align: center;
+  left: 0;
+}
+/*# sourceMappingURL=style.css.map */
