@@ -21,9 +21,13 @@ body
     // overflow-x: hidden
 
 // Strapping 
+    .big-pad 
+        padding: 0 10%
+
 
 .pad 
-    padding: 0 1.5rem
+    // padding: 0 10rem  
+    padding: 0 .5rem 0 1.5rem  
 .half 
     display: grid
     grid-template-columns: 2fr 2fr
@@ -117,7 +121,7 @@ header
 
 .text-section
     display: flex 
-    padding: 0 2.5rem
+    padding: 0 .5rem
     flex-direction: column
     flex: 2
     // background-color: #333
@@ -163,6 +167,10 @@ header
         .text 
             // display
             padding: 0 1.5rem
+            p 
+                // width: 59%
+                line-height: 1.55
+                font-size: 1.2rem
 
             span
                 
@@ -211,6 +219,8 @@ header
     section
         flex: 1
         display: flex
+        justify-content: center
+        // align-items: center
         flex-direction: column
         // flex: 1
         // background-color: #a89
@@ -272,11 +282,17 @@ header
         border-top: 2px solid $orange
         // background-color: #5ba135
         flex-direction: column
-        align-items: flex-start
+        align-items: center
+        justify-content: center
         margin: 0 5rem
-        p 
-            margin: 1rem 0 
-            line-height: 1.5rem
+        // text-align: center
+        div 
+            width: 59%
+            p 
+                margin: 1rem 0 
+                // line-height: 1.5rem
+                line-height: 1.55
+                font-size: 1.2rem
 
 
 
@@ -301,13 +317,15 @@ header
     margin: 10rem 0
 
     .team-photos 
+        // display: 
         .team 
             margin: 0 1rem
             position: relative
+            width: 20rem
             
             img 
                 height: auto
-                width: 350px
+                width: 100%
                 transition: 300ms 
             p 
                 display: block 
@@ -323,11 +341,17 @@ header
             &:hover
                 img
                     transform: scale(1.05)
+                    background-color: linear-gradient(to right, #333, #333)
                 p
                     background-color: transparent 
                     bottom: -.2rem
-                    // color: $orange
+                    color: #fff
                     font-size: 2rem
+                    font-weight: 600
+                    left: 0
+                    // width: 130%
+                    &:last-child
+                        color: $orange
 
 
 
@@ -440,3 +464,83 @@ footer
             width: 2.5rem
 
         
+
+@media (max-width: 906px) 
+    header 
+        background: url('images/header-img.png') fixed center no-repeat
+        background-size: cover
+        .image
+            display: none
+
+
+
+    .contact 
+        // text-align: center
+        section 
+            display: inherit 
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-bottom: 5rem
+            // overflow: hidden
+            height: 100%
+            .action 
+                width: 100%
+                display: flex
+                span 
+                    margin-right: 10%
+                    
+                img 
+                    margin-right: 10%
+                p 
+                    width: 70%
+
+
+        .message 
+            display: inherit
+            // text-align: center
+
+            .form 
+                form 
+                    overflow: hidden
+                    width: 100%
+                    .row 
+                        width: 100%
+                        display: flex
+                        flex-direction: column
+                        // background-color: #dd0
+                    .input-group 
+                        text-align: left
+                        input 
+                            width: 100%
+                    .input-submit
+                        text-align: center
+                    .input-group:last-child
+                        margin: 0
+    .sessions 
+        display: flex 
+        flex-direction: column
+    .row 
+        display: inherit 
+        flex-direction: column
+    .text-section
+        
+         .main-text
+             display: inherit
+             flex-direction: column
+             .text 
+                 
+             .side-text 
+                 .rotate 
+                    transform: rotate(0)
+    
+    .photographers
+        .team-photos
+            display: flex
+            align-items: center
+            .team 
+                margin: 1rem 0
+                img 
+                    height: auto 
+                    width: 20rem
+

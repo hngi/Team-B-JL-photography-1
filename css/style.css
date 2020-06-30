@@ -16,7 +16,7 @@ body {
 }
 
 .pad {
-  padding: 0 1.5rem;
+  padding: 0 .5rem 0 1.5rem;
 }
 
 .half {
@@ -188,7 +188,7 @@ header .text .box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 2.5rem;
+  padding: 0 .5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -260,6 +260,11 @@ header .text .box a {
   padding: 0 1.5rem;
 }
 
+.text-section .main-text .text p {
+  line-height: 1.55;
+  font-size: 1.2rem;
+}
+
 .text-section .main-text .text span {
   margin: 0 10px;
 }
@@ -323,6 +328,9 @@ header .text .box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -405,15 +413,23 @@ header .text .box a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 5rem;
 }
 
-.sessions .text p {
+.sessions .text div {
+  width: 59%;
+}
+
+.sessions .text div p {
   margin: 1rem 0;
-  line-height: 1.5rem;
+  line-height: 1.55;
+  font-size: 1.2rem;
 }
 
 .gallery {
@@ -447,11 +463,12 @@ header .text .box a {
 .photographers .team-photos .team {
   margin: 0 1rem;
   position: relative;
+  width: 20rem;
 }
 
 .photographers .team-photos .team img {
   height: auto;
-  width: 350px;
+  width: 100%;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -472,12 +489,20 @@ header .text .box a {
 .photographers .team-photos .team:hover img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  background-color: linear-gradient(to right, #333, #333);
 }
 
 .photographers .team-photos .team:hover p {
   background-color: transparent;
   bottom: -.2rem;
+  color: #fff;
   font-size: 2rem;
+  font-weight: 600;
+  left: 0;
+}
+
+.photographers .team-photos .team:hover p:last-child {
+  color: #FE5D26;
 }
 
 h2 {
@@ -636,5 +661,116 @@ footer .social-icons {
 footer .social-icons img {
   height: auto;
   width: 2.5rem;
+}
+
+@media (max-width: 906px) {
+  header {
+    background: url("images/header-img.png") fixed center no-repeat;
+    background-size: cover;
+  }
+  header .image {
+    display: none;
+  }
+  .contact section {
+    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 5rem;
+    height: 100%;
+  }
+  .contact section .action {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact section .action span {
+    margin-right: 10%;
+  }
+  .contact section .action img {
+    margin-right: 10%;
+  }
+  .contact section .action p {
+    width: 70%;
+  }
+  .contact .message {
+    display: inherit;
+  }
+  .contact .message .form form {
+    overflow: hidden;
+    width: 100%;
+  }
+  .contact .message .form form .row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .message .form form .input-group {
+    text-align: left;
+  }
+  .contact .message .form form .input-group input {
+    width: 100%;
+  }
+  .contact .message .form form .input-submit {
+    text-align: center;
+  }
+  .contact .message .form form .input-group:last-child {
+    margin: 0;
+  }
+  .sessions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .row {
+    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text-section .main-text {
+    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text-section .main-text .side-text .rotate {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  .photographers .team-photos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .photographers .team-photos .team {
+    margin: 1rem 0;
+  }
+  .photographers .team-photos .team img {
+    height: auto;
+    width: 20rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
