@@ -62,6 +62,10 @@ nav
 
 // remove inline styling 
 
+img 
+    height: auto 
+    width: 30rem
+
 header 
     height: 35rem   
     backgrond: $dark
@@ -78,6 +82,7 @@ header
     .text 
         display: inherit
         color: #fff
+        flex: 2
         flex-direction: column
         justify-content: center
         align-items: center
@@ -101,8 +106,10 @@ header
 .button 
     padding: 20px
     background-color: #fff
-    width: 10rem
+    width: 12rem
     color: $dark
+    text-align: center
+    font-weight: 600
     &:hover
         background: $dark
         color: #fff
@@ -167,14 +174,14 @@ header
     height: 100%
     flex-direction: column
     img 
-        height: auto
-        width: 100% 
+        // height: auto
+        // width: 100% 
     .image-info 
         margin: 
         display: flex
         width: 100%
         justify-content: space-between
-        border-top: 3px solid #e91
+        border-top: 3px solid $orange
         margin: 2.5rem 0
         p 
             padding: .2rem 0
@@ -183,9 +190,14 @@ header
 .button-outline
     color: $dark
     border: 2px solid $dark
-    // margin: .5rem 0
+    background: #fff
+    text-align: center
+    font-weight: 500
+    font-family: $main-font
+    font-size: 1rem
+    letter-spacing: 1px
     padding: .5rem 1.5rem
-    width: 8.5rem
+    width: 9.5rem
     &:hover 
         background-color: $dark
         color: #fff
@@ -195,6 +207,7 @@ header
 .services 
     width: 100% 
     flex-direction: row
+    margin: 5rem 0
     section
         flex: 1
         display: flex
@@ -208,14 +221,14 @@ header
             hr 
                 border: 0
                 background-color: $orange
-                width: 25%
-                height: .25rem
+                width: 45%
+                height: .2rem
             h2 
                 padding: 1.5rem 0
 
         .text 
             display: flex
-            justify-content: center
+            // justify-content: center
             flex-direction: column
             // align-items: center
             // background-color: #eeaa11
@@ -224,14 +237,25 @@ header
             ul 
                 padding-left: 20px
                 margin: 1.5rem 0
+                li 
+                    list-style-type: none
+                    font-size: 1.2rem 
+                    &::before 
+                        content: "•"
+                        color: red 
+                        // font-weight: bold
+                        width: 1rem 
+                        margin-left: -1rem
+
     
     .image
         display: flex
         padding: 0 2.5rem
         // check here for image resize
         img 
-            heigth: auto
-            width: 100%
+            // heigth: auto
+            // width: 30rem
+            padding-left: 5rem
 
 
     
@@ -241,8 +265,8 @@ header
     justify-content: space-around 
     .image 
         img 
-            heigth: auto
-            width: 100%
+            // heigth: auto
+            // width: 100%
 
     .text 
         border-top: 2px solid $orange
@@ -250,19 +274,32 @@ header
         flex-direction: column
         align-items: flex-start
         margin: 0 5rem
+        p 
+            margin: 1rem 0 
+            line-height: 1.5rem
 
 
 
 .gallery 
+    position: relative
     height: 33rem
+    h2 
+        position: relative
+        left: 1rem
     .gallery-images
         height: 100%
         background-color: $dark
         // vertical-align: center
+        padding: 0 5rem
+        img 
+            object-fit: cover
+            height: auto
+            width: 100%
 
 .photographers 
     text-align: center
-    margin: 3rem 0
+    margin: 10rem 0
+
     .team-photos 
         .team 
             margin: 0 1rem
@@ -270,7 +307,7 @@ header
             
             img 
                 height: auto
-                width: 550px
+                width: 350px
                 transition: 300ms 
             p 
                 display: block 
@@ -295,9 +332,13 @@ header
 
 
 h2 
-    font-size: 2.5rem
+    font-size: 2rem
+    margin: 2rem 0
+    font-weight: 800
 
 .contact
+    // padding: 0 7rem
+    margin-bottom: 10rem
     section 
         display: flex
         justify-content: flex-start
@@ -309,9 +350,13 @@ h2
         .action
             width: 30rem
             p 
-                font-size: 1.5rem
+                font-size: 1rem
+                padding: 1rem 0
             span 
                 font-size: 2rem
+            img 
+                height: auto
+                width: 2rem
 
 
     .message 
@@ -354,7 +399,7 @@ footer
     display: flex
     align-items: center
     h3 
-        padding: .3rem 0
+        padding: .5rem 0
     a 
         margin: .2rem 0
     .about 
@@ -390,5 +435,8 @@ footer
         width: 20rem
         text-align: center
         left: 0
+        img 
+            height: auto 
+            width: 2.5rem
 
         

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
@@ -91,6 +92,11 @@ nav .navbar ul li a:hover, nav .navbar ul li a:active {
   color: #fdfd2e;
 }
 
+img {
+  height: auto;
+  width: 30rem;
+}
+
 header {
   height: 35rem;
   backgrond: #1D1D1D;
@@ -124,6 +130,9 @@ header .image img {
 header .text {
   display: inherit;
   color: #fff;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -164,8 +173,10 @@ header .text .box a {
 .button {
   padding: 20px;
   background-color: #fff;
-  width: 10rem;
+  width: 12rem;
   color: #1D1D1D;
+  text-align: center;
+  font-weight: 600;
 }
 
 .button:hover {
@@ -262,11 +273,6 @@ header .text .box a {
           flex-direction: column;
 }
 
-.text-image img {
-  height: auto;
-  width: 100%;
-}
-
 .text-image .image-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,7 +281,7 @@ header .text .box a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 3px solid #e91;
+  border-top: 3px solid #FE5D26;
   margin: 2.5rem 0;
 }
 
@@ -286,8 +292,14 @@ header .text .box a {
 .button-outline {
   color: #1D1D1D;
   border: 2px solid #1D1D1D;
+  background: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-family: Roboto;
+  font-size: 1rem;
+  letter-spacing: 1px;
   padding: .5rem 1.5rem;
-  width: 8.5rem;
+  width: 9.5rem;
 }
 
 .button-outline:hover {
@@ -301,6 +313,7 @@ header .text .box a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 5rem 0;
 }
 
 .services section {
@@ -332,8 +345,8 @@ header .text .box a {
 .services section .title hr {
   border: 0;
   background-color: #FE5D26;
-  width: 25%;
-  height: .25rem;
+  width: 45%;
+  height: .2rem;
 }
 
 .services section .title h2 {
@@ -344,9 +357,6 @@ header .text .box a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -360,6 +370,18 @@ header .text .box a {
   margin: 1.5rem 0;
 }
 
+.services section .text ul li {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+.services section .text ul li::before {
+  content: "•";
+  color: red;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
 .services .image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -368,19 +390,13 @@ header .text .box a {
 }
 
 .services .image img {
-  heigth: auto;
-  width: 100%;
+  padding-left: 5rem;
 }
 
 .sessions {
   padding: 2rem 1.5rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.sessions .image img {
-  heigth: auto;
-  width: 100%;
 }
 
 .sessions .text {
@@ -395,18 +411,37 @@ header .text .box a {
   margin: 0 5rem;
 }
 
+.sessions .text p {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
 .gallery {
+  position: relative;
   height: 33rem;
+}
+
+.gallery h2 {
+  position: relative;
+  left: 1rem;
 }
 
 .gallery .gallery-images {
   height: 100%;
   background-color: #1D1D1D;
+  padding: 0 5rem;
+}
+
+.gallery .gallery-images img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+  width: 100%;
 }
 
 .photographers {
   text-align: center;
-  margin: 3rem 0;
+  margin: 10rem 0;
 }
 
 .photographers .team-photos .team {
@@ -416,7 +451,7 @@ header .text .box a {
 
 .photographers .team-photos .team img {
   height: auto;
-  width: 550px;
+  width: 350px;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -446,7 +481,13 @@ header .text .box a {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.contact {
+  margin-bottom: 10rem;
 }
 
 .contact section {
@@ -467,11 +508,17 @@ h2 {
 }
 
 .contact section .action p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 1rem 0;
 }
 
 .contact section .action span {
   font-size: 2rem;
+}
+
+.contact section .action img {
+  height: auto;
+  width: 2rem;
 }
 
 .contact .message .form form {
@@ -529,7 +576,7 @@ footer {
 }
 
 footer h3 {
-  padding: .3rem 0;
+  padding: .5rem 0;
 }
 
 footer a {
@@ -584,5 +631,10 @@ footer .social-icons {
   width: 20rem;
   text-align: center;
   left: 0;
+}
+
+footer .social-icons img {
+  height: auto;
+  width: 2.5rem;
 }
 /*# sourceMappingURL=style.css.map */
