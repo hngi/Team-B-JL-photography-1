@@ -21,9 +21,10 @@ body
     // overflow-x: hidden
 
 // Strapping 
-    .big-pad 
-        padding: 0 10%
-
+.big-pad 
+    padding: 0 5%
+.space 
+    margin: 1.5rem 0 
 
 .pad 
     // padding: 0 10rem  
@@ -51,6 +52,10 @@ nav
     justify-content: space-between
     align-items: center
     padding: 0 25px
+    .logo 
+        img 
+            height: auto 
+            width: 150px
     .navbar 
            ul 
                display: flex
@@ -70,9 +75,9 @@ img
     height: auto 
     width: 30rem
 
-header 
+.header 
     height: 35rem   
-    backgrond: $dark
+    background-color: $dark
     display: flex
     .image
         display: inherit
@@ -168,7 +173,7 @@ header
             // display
             padding: 0 1.5rem
             p 
-                // width: 59%
+                width: 80%
                 line-height: 1.55
                 font-size: 1.2rem
 
@@ -181,6 +186,7 @@ header
     display: inherit
     height: 100%
     flex-direction: column
+    // text-align: center
     img 
         // height: auto
         // width: 100% 
@@ -190,7 +196,7 @@ header
         width: 100%
         justify-content: space-between
         border-top: 3px solid $orange
-        margin: 2.5rem 0
+        margin: 1.5rem 0
         p 
             padding: .2rem 0
 
@@ -341,17 +347,20 @@ header
             &:hover
                 img
                     transform: scale(1.05)
-                    background-color: linear-gradient(to right, #333, #333)
+                    background: linear-gradient(to right, #333, #333)
                 p
-                    background-color: transparent 
+                    background-color: #ffffff77
+                    transform: scale(1.05)
                     bottom: -.2rem
-                    color: #fff
-                    font-size: 2rem
-                    font-weight: 600
+                    color: $dark
+                    font-size: 1.2rem
+                    // font-weight: 600
+                    letter-spacing: 1px
+                    width: -220%
                     left: 0
                     // width: 130%
-                    &:last-child
-                        color: $orange
+                    // &:last-child
+                    //     color: $orange
 
 
 
@@ -466,13 +475,20 @@ footer
         
 
 @media (max-width: 906px) 
-    header 
-        background: url('images/header-img.png') fixed center no-repeat
+    .header 
+        height: 80vh
+        background: linear-gradient(to right, #333333c0, #1d1b1bd2), url('/images/header-img.png') center center no-repeat
+        // background-color: #444
         background-size: cover
         .image
             display: none
 
 
+    .half 
+        display: flex 
+        flex-direction: column-reverse
+    .big-pad 
+        padding: 0 2%
 
     .contact 
         // text-align: center
@@ -513,6 +529,8 @@ footer
                         text-align: left
                         input 
                             width: 100%
+                        textarea 
+                            width: 100%
                     .input-submit
                         text-align: center
                     .input-group:last-child
@@ -520,6 +538,13 @@ footer
     .sessions 
         display: flex 
         flex-direction: column
+        .text 
+            border: 0
+            align-items: flex-start
+            div 
+                width: 100%
+                height: 100%
+                // overflow: hidden
     .row 
         display: inherit 
         flex-direction: column
@@ -532,7 +557,7 @@ footer
                  
              .side-text 
                  .rotate 
-                    transform: rotate(0)
+                    // transform: rotate(0)
     
     .photographers
         .team-photos
@@ -544,3 +569,14 @@ footer
                     height: auto 
                     width: 20rem
 
+
+
+@media (min-width: 320px) and (max-width: 667px)
+    footer 
+        display: flex 
+        flex-direction: column
+        align-items: center
+        justify-content: space-evenly
+        padding: 0
+        height: 32rem
+        padding-bottom: 5rem
