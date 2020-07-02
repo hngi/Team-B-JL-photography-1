@@ -17,6 +17,7 @@ body {
 
 .big-pad {
   padding: 0 5%;
+  position: relative;
 }
 
 .space {
@@ -62,6 +63,23 @@ a {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.vertical {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.girl-two {
+  background: url("/images/girl.png") center center no-repeat;
+  background-position: cover;
+}
+
+.girl-one {
+  background: url("/images/female-light.png") center center no-repeat;
+  background-position: cover;
 }
 
 nav {
@@ -197,6 +215,36 @@ img {
   color: #fff;
 }
 
+.upper-text {
+  height: 15%;
+  padding-left: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 5rem;
+  top: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.upper-text h2 {
+  font-size: 1.6rem;
+  margin-left: 4rem;
+}
+
+.upper-text hr {
+  border: 0;
+  background-color: #FE5D26;
+  width: 15%;
+  margin: 0 2rem;
+  height: .25rem;
+}
+
 .text-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,62 +259,11 @@ img {
           flex: 2;
 }
 
-.text-section .upper-text {
-  height: 15%;
-  padding-left: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.text-section .upper-text hr {
-  border: 0;
-  background-color: #FE5D26;
-  width: 30%;
-  height: .25rem;
-}
-
 .text-section .main-text {
   height: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.text-section .main-text .side-text {
-  color: #1D1D1D;
-  height: 100%;
-  width: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.text-section .main-text .side-text .rotate {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  background-color: #FE5D26;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1.0rem 2rem;
-}
-
-.text-section .main-text .side-text .rotate.second {
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
 }
 
 .text-section .main-text .text {
@@ -281,6 +278,69 @@ img {
 
 .text-section .main-text .text span {
   margin: 0 10px;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+.box.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.box .case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box .case .image {
+  height: 20rem;
+}
+
+.box .side-text {
+  color: #1D1D1D;
+  height: 100%;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .side-text .rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: #FE5D26;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.0rem 2rem;
+}
+
+.box .side-text .rotate.second {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .text-image {
@@ -437,7 +497,7 @@ img {
 }
 
 .sessions .text div {
-  width: 59%;
+  width: 100%;
 }
 
 .sessions .text div p {
@@ -687,17 +747,76 @@ footer .social-icons img {
   .header .image {
     display: none;
   }
-  .half {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .vanish {
+    visibility: hidden;
+  }
+  main {
+    margin-top: 1rem;
+  }
+  .upper-text {
+    text-align: left;
+    display: inline;
+  }
+  .upper-text h2 {
+    margin: 0;
+  }
+  .upper-text hr {
+    display: none;
+  }
+  .sessions .image {
+    background: url("/images/set.png") center center no-repeat;
+    background-position: cover;
+  }
+  .sessions .text {
+    margin: 0;
+  }
+  .sessions .text div p {
+    width: 80%;
+  }
+  .info.reverse {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .box.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .pad {
+    padding: 0;
+  }
+  .half {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .big-pad {
     padding: 0 2%;
+  }
+  .services section .title h2 {
+    margin: .5rem 0;
+  }
+  .services section .title hr {
+    display: none;
+  }
+  .services section .text {
+    margin: 0;
   }
   .contact section {
     display: inherit;
