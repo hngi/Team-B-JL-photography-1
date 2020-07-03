@@ -46,13 +46,24 @@ a
     flex-direction: row-reverse
 .vertical 
     flex-direction: row
-
 .girl-two 
     background: url('/images/girl.png') center center no-repeat
     background-position: cover
 .girl-one 
     background: url('/images/female-light.png') center center no-repeat
     background-position: cover
+.burger 
+    display: none
+    cursor: pointer
+    position: relative
+    transition: all 350ms ease-in
+    &:hover 
+        opacity: .6
+        bottom: 1rem
+
+    img 
+        height: auto 
+        width: 2rem
 
 nav 
     width: 100%
@@ -161,7 +172,7 @@ img
     display: flex 
     padding: 0 .5rem
     flex-direction: column
-    flex: 2
+    flex: 2 
     // background-color: #333
             
     .main-text 
@@ -185,6 +196,8 @@ img
 .box 
     display: flex 
     flex-direction: row
+    justify-content: center
+    align-items: center
     &.reverse
         flex-direction: row-reverse
 
@@ -202,7 +215,8 @@ img
                 color: $dark
                 // background-color: #419789
                 height: 100%
-                width: 10%
+                // display: inline-flex
+                width: 15%
                 display: flex
                 justify-content: center
                 align-items: center
@@ -210,6 +224,10 @@ img
                     transform: rotate(90deg)
                     background-color: $orange
                     display: flex
+                    justify-self: center
+                    position: relative 
+                    // top: 8rem
+                    // transform: translate(-50%, -50%)
                     // width: 100%
                     // height: 15%
                     padding: 1.0rem 2rem
@@ -256,6 +274,19 @@ img
         background-color: $dark
         color: #fff
 
+
+@keyframes light-bounce
+    0%
+        transform: translateY(-10px)
+        
+    40%
+        transform: translateY(10px)
+    
+    100%
+        transform: translateY(-10px)
+        
+    
+        
 
 
 .services 
@@ -320,9 +351,28 @@ img
     padding: 2rem 1.5rem
     justify-content: space-around 
     .image 
+        height: 30rem
+        width: auto
+        background: url('/images/set.png') center center no-repeat
+        background-position: cover
+        display: flex
+        align-items: center
+        justify-content: center
         img 
             // heigth: auto
             // width: 100%
+        .play
+            width: 5rem 
+            height: auto
+            opacity: 0.8
+            transition: 150ms ease-out
+            animation: light-bounce 1.8s infinite
+            &:hover 
+                transform: scale(1.9)
+                animation-play-state: paused
+                opacity: 1
+                cursor: pointer
+
 
     .text 
         border-top: 2px solid $orange
@@ -351,12 +401,16 @@ img
     .gallery-images
         height: 100%
         background-color: $dark
-        // vertical-align: center
         padding: 0 5rem
-        img 
-            object-fit: cover
-            height: auto
+        .image 
+            height: 40rem
+            background: url('/images/GALLERY.png') center no-repeat
+            background-position: cover
             width: 100%
+        // img 
+        //     object-fit: cover
+        //     height: auto
+        //     width: 100%
 
 .photographers 
     text-align: center
@@ -428,7 +482,7 @@ h2
             span 
                 font-size: 2rem
             img 
-                height: auto
+                height: 2rem
                 width: 2rem
 
 
@@ -514,22 +568,62 @@ footer
 
 @media (max-width: 747px) 
     nav 
-        .navbar 
+        position: relative
+        display: flex
+        justify-content: space-between
+        &.responsive
+            .navbar
+                background-color: $dark 
+                color: #fff
+                top: 5rem
+                width: 100%
+                height: 100%
+                left: 0
+                // overflow: hidden
+                position: absolute
+                ul 
+                    display: flex
+                    flex-direction: column
+                    transition: 350ms ease-out
+                    background-color: $orange
+                    box-shadow: 1px 8px 29px -6px rgba(0,0,0,0.35)
+                    
+                    align-items: center
+                    justify-content: center
+                    border-bottom: .5rem solid #fff
+                    li 
+                        margin: 3rem 0
+                        a
+                            color: #fff
+                            padding: .5rem 2.5rem
+                            border-radius: 100px
 
-            &.responsive
-        
+                            &:hover, &:active
+                                color: $dark
+                                box-shadow: 1px 8px 29px -6px rgba(0,0,0,0.35)
+                                background-color: #fff
+
+        .navbar 
+            ul 
+                display: none 
+        .burger 
+            position: absolute
+            display: inline
+            right: 5%
+
+                
+                
 
 @media (max-width: 906px) 
+    body 
+        overflow: hidden
     .header 
         height: 80vh
         background: linear-gradient(to right, #333333c0, #1d1b1bd2), url('/images/header-img.png') center center no-repeat
-        // background-color: #444
         background-size: cover
         .image
             display: none
 
-    // .reverse 
-    //     flex-direction: column-reverse
     .vanish 
         visibility: hidden
     main
@@ -558,7 +652,7 @@ footer
 
     .box 
         display: flex
-        flex-direction: row-reverse
+        // flex-direction: row-reverse
         &.reverse 
             flex-direction: row
     
@@ -582,14 +676,12 @@ footer
                 margin: 0
 
     .contact 
-        // text-align: center
         section 
             display: inherit 
             flex-direction: column
             align-items: center
             justify-content: center
             margin-bottom: 5rem
-            // overflow: hidden
             height: 100%
             .action 
                 width: 100%
@@ -605,7 +697,6 @@ footer
 
         .message 
             display: inherit
-            // text-align: center
 
             .form 
                 form 
@@ -615,7 +706,6 @@ footer
                         width: 100%
                         display: flex
                         flex-direction: column
-                        // background-color: #dd0
                     .input-group 
                         text-align: left
                         input 
@@ -660,9 +750,43 @@ footer
                     height: auto 
                     width: 20rem
 
+    .gallery
+        .gallery-images 
+            width: 100%
+            .image
+                height: 40rem
+                background: url('/images/gallery-mobile.png') center no-repeat
+                background-position: cover
+                width: 100%
+
+
+
+
 
 
 @media (min-width: 320px) and (max-width: 667px)
+    .box 
+        .side-text
+            .rotate
+                position: relative 
+
+                // background-color: #fff
+    .text-section 
+        .main-text 
+            .text 
+                padding: 0
+                text-align: left
+
+                p 
+                    width: 80%
+
+                &.flex-center
+                
+                    justify-content: flex-start
+                    align-items: flex-start
+                    display: flex
+                    // background-color: $orange
+
     footer 
         display: flex 
         flex-direction: column
